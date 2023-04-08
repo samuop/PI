@@ -25,9 +25,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "ProyectoInt/node_modules/Boostrap/dist/css/bootstrap.css"
             ],
-            "scripts": []
+            "scripts": [
+              "ProyectoInt/node_modules/Boostrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
