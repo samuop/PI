@@ -26,11 +26,9 @@
             ],
             "styles": [
               "src/styles.css",
-              "ProyectoInt/node_modules/Boostrap/dist/css/bootstrap.css"
+              "node_modules/boostrapdist/css/bootstrap.css"
             ],
-            "scripts": [
-              "ProyectoInt/node_modules/Boostrap/dist/js/bootstrap.js"
-            ]
+            "scripts": ["node_modules/boostrap/dist/js/bootstrap.js" ]
           },
           "configurations": {
             "production": {
