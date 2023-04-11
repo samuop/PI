@@ -8,6 +8,7 @@ import { LOGOArComponent } from './components/logoar/logoar.component';
 import { RedesSocialesComponent } from './components/redes-sociales/redes-sociales.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
     RedesSocialesComponent,
     BannerComponent,
     AcercaDeComponent,
+    ExperienciaComponent,
   ],
   imports: [
     BrowserModule,
