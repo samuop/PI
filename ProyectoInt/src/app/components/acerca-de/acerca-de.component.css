@@ -1,5 +1,5 @@
 .row{
-    padding: 25px;
+    padding: 50px;
 }
 
 div{
@@ -8,4 +8,41 @@ div{
 
 #acercademi{
     text-align: center;
+}
+
+@media (min-width: 576px){
+    #fotoperfil{
+        position:absolute;
+        width: 15%;
+        border-radius:100%;
+        box-shadow: 3px 3px 5px grey;
+        left:3%;
+        top:90%;
+    }
+}
+
+@media (max-width: 575px){
+    #fotoperfil{
+        position:absolute;
+        width: 15%;
+        border-radius:100%;
+        box-shadow: 3px 3px 5px grey;
+        left:7%;
+        top:90%;
+    }
+
+    #Info{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1193px){
+    #fotoperfil{
+        position:absolute;
+        width: 8%;
+        border-radius:100%;
+        box-shadow: 3px 3px 5px grey;
+        left:7%;
+        top:83%;
+    }
 }
