@@ -13,11 +13,11 @@ div{
 @media (min-width: 576px){
     #fotoperfil{
         position:absolute;
-        width: 15%;
+        width:10%;
         border-radius:100%;
         box-shadow: 3px 3px 5px grey;
         left:3%;
-        top:90%;
+        top: 500px;
     }
 }
 
@@ -28,7 +28,7 @@ div{
         border-radius:100%;
         box-shadow: 3px 3px 5px grey;
         left:7%;
-        top:90%;
+        top:500px;
     }
 
     #Info{
@@ -43,6 +43,20 @@ div{
         border-radius:100%;
         box-shadow: 3px 3px 5px grey;
         left:7%;
-        top:83%;
+        top:500px;
+    }
+}
+@media (max-width: 386px){
+    #fotoperfil{
+        position:absolute;
+        width: 15%;
+        border-radius:100%;
+        box-shadow: 3px 3px 5px grey;
+        left:40%;
+        top:690px;
+    }
+
+    #Info{
+        text-align: center;
     }
 }
