@@ -4,7 +4,7 @@
  */
 package com.portfolio.SOP.Dto;
 
-import jakarta.validation.constraints.NotBlank;
+import javax.validation.constraints.NotBlank;
 
 /**
  *
