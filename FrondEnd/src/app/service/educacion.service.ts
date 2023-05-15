@@ -1,31 +1,33 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/storage';
+import { Observable } from 'rxjs';
+import { Educacion } from '../model/educacion';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ImageService {
- url: string = "";
-  constructor(private storage: Storage) { }
+export class EducacionService {
+  URL = 'https://backendsop.onrender.com/educacion/';
 
-  uploadImage($event:any, name: String){
-    const file = $event.target.files[0]
-    const imgRef = ref(this.storage, `imagen/` + name)
-    uploadBytes(imgRef, file)
-    .then(respone => {this.getImages()})
-    .catch(error => console.log(error))
+  constructor(private httpClient : HttpClient) { }
+
+  public lista(): Observable<Educacion[]>{
+    return this.httpClient.get<Educacion[]>(this.URL + 'lista');
   }
 
+  public detail(id: number): Observable<Educacion>{
+    return this.httpClient.get<Educacion>(this.URL + `detail/${id}`);
+  }
 
-  getImages(){
-    const imagesRef = ref(this.storage, 'imagen')
-    list(imagesRef)
-    .then(async response =>{
-      for(let item of response.items){
-        this.url = await getDownloadURL(item);
-        console.log("La URL es:" + this.url);
-      }
-    })
-    .catch(error => console.log(error))
+  public save(educacion: Educacion): Observable<any>{
+    return this.httpClient.post<any>(this.URL + 'create', educacion);
+  }
+
+  public update(id: number, educacion: Educacion): Observable<any>{
+    return this.httpClient.put<any>(this.URL + `update/${id}`, educacion);
+  }
+
+  public delete(id: number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
 }
